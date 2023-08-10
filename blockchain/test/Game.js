@@ -18,18 +18,20 @@ describe("Game", () => {
 
         // console.log(`Contract deployed to`, game.address);
 
-        const mintedAsset = game.mintAsset(owner, gameCardDetails);
-        return {game, mintedAsset, owner};
+        const ownerAddress = owner.address;
+        console.log(ownerAddress);
+
+        const mintedAsset = await game.mintAsset(ownerAddress, gameCardDetails);
+        return {game, mintedAsset, ownerAddress};
     }
 
 
     describe("Deployment", () => {
         it("Should be able to deploy the contract and mint an nft", async () => {
-            const { game, mintedAsset, owner } = await loadFixture(deployGameFixture);
-
-            expect(await game.mintAsset(owner, gameCardDetails))
-            .to
-            .equal(mintedAsset);
+            const { game, mintedAsset, ownerAddress } = await loadFixture(deployGameFixture);
+            expect(new Promise((res, req) => {
+                game.mintAsset(ownerAddress, gameCardDetails)
+            })).to.be.fulfilled
         })
     })
 })

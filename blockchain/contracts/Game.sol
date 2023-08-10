@@ -24,6 +24,13 @@ contract Game is ERC721URIStorage {
 
     }
 
+    function buyAsset(uint cardPrice, string memory tokenURI) public payable {
+        address payable sender = payable(msg.sender);
+
+        require(msg.value >= cardPrice, "Insufficient funds");
+        mintAsset(sender, tokenURI);
+    }
+
     // function mintAsset(address buyerAddress, string memory URI) {
     //     // mint new nft
     // }    
