@@ -1,0 +1,44 @@
+{
+    "nfts": [
+        {
+            "image": "https://i.pinimg.com/474x/e5/e2/20/e5e220881bafc8f09abddb958e43b5e0.jpg",
+            "name": "DefiAstronaut 01",
+            "price": 0.01
+        },
+        {
+            "image": "https://i.pinimg.com/474x/8c/cd/40/8ccd40e9c94560468ed9d003ed93f535.jpg",
+            "name": "DefiAstronaut 02",
+            "price": 0.023
+        },
+        {
+            "image": "https://i.pinimg.com/474x/59/63/cd/5963cd35d2a3b3a1997f598cf07d4563.jpg",
+            "name": "DefiAstronaut 03",
+            "price": 0.0034
+        },
+        {
+            "image": "https://i.pinimg.com/474x/90/c1/c0/90c1c0e2eefb7001b801861d8fe28593.jpg",
+            "name": "DefiAstronaut 04",
+            "price": 0.0034
+        },
+        {
+            "image": "https://i.pinimg.com/474x/e6/77/cd/e677cdffb34f6da59ede2a831fc3f41a.jpg",
+            "name": "DefiAstronaut 05",
+            "price": 0.0034
+        },
+        {
+            "image": "https://i.pinimg.com/474x/93/c9/a3/93c9a39c07532844bc48dc3aa115543c.jpg",
+            "name": "DefiAstronaut 06",
+            "price": 0.0034
+        },
+        {
+            "image": "https://i.pinimg.com/474x/79/47/76/794776f7914da689e5e9702a31fd3fc9.jpg",
+            "name": "DefiAstronaut 07",
+            "price": 0.0034
+        },
+        {
+            "image": "https://i.pinimg.com/474x/5c/ae/c8/5caec8d0d5a9dad3342041c6aa8fd74d.jpg",
+            "name": "DefiAstronaut 08",
+            "price": 0.0034
+        }
+    ]
+}

@@ -1,3 +1,7 @@
 {
-  "name": "hardhat-project"
+  "name": "hardhat-project",
+  "dependencies": {
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.15.0"
+  }
 }
