@@ -32,7 +32,7 @@ const NFTCard = ({props: { image, name, price }}) => {
 
             <div className='flex text-[12px] items-center my-2'>
                 <img src={require('../assets/avatar.png')} alt=""  className='mr-3'/>
-                <span>{`${price} $`}</span>
+                <span>{`${price} ETH`}</span>
             </div>
             <div>
                 <Button placeholder={'Buy'} onClick={handleBuy} icon={<AiOutlineShop />}/>

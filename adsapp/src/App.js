@@ -3,11 +3,16 @@ import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import { Button } from './components/Buttons';
 import { GoRocket } from 'react-icons/go';
+import { BiSolidUpArrow } from 'react-icons/bi';
 import nftsdata from './components/data.json';
 import NFTCard from './components/Card';
+import { Route, Routes } from 'react-router-dom';
+import Account from './components/Account';
 
-function App() {
+function Homepage() {
   const { status, connect, account, chainId, ethereum } = useMetaMask();
+  const [showProfile, setShowProfile] = useState(false);
+  const [userNft, setUserNft] = useState([]);
   // const Address = '';
   
 
@@ -43,13 +48,25 @@ function App() {
       </div>
 
       <div className='py-12'>
-        <CardSection/>
+        <CardSection />
+      </div>
+
+      <div 
+      onClick={() => {
+        setShowProfile(!showProfile);
+      }}
+      className={`${showProfile ? 'absolute top-16': 'absolute'} px-2 bg-purple-400 bottom-0 cursor-pointer right-0 bg-white w-[150px] h-[30px] flex items-center`}>
+        <BiSolidUpArrow />
+        <span className='mx-4'>My profile</span>
+      </div>
+      <div className={`${showProfile ? "block": "hidden"} h-[80vh] w-full bg-white absolute top-24`}>
+        <Account address={address}/>
       </div>
     </div>
   );
 }
 
-export default App;
+
 
 
 const HeroCard = () => {
@@ -82,7 +99,8 @@ const CardSection = () => {
       <div className='h-full pt-6 grid grid-cols-4 mx-auto w-[1200px]'> 
         {nftsdata.nfts.map((nft) => {
           return (
-            <div>
+            <div className='my-4'
+            >
               <NFTCard props={nft}/>
             </div>
           )
@@ -91,4 +109,14 @@ const CardSection = () => {
     </div>
   )
 }
+
+const App = () => {
+
+  return (
+    <div>
+      <Homepage />
+    </div>
+  )
+}
+export default App;
  
